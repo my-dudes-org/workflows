@@ -1,0 +1,32 @@
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+      - master
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check it
+        run: |
+          echo "Hello world"
+          echo "The event name is ${{ github.event_name }}"
+          echo "The event path is ${{ github.event_path }}"
+          echo "The workflow path is ${{ github.workflow }}"
+          echo "The action path is ${{ github.action_path }}"
+          echo "The repository is ${{ github.repository }}"
+          echo "The ref is ${{ github.ref }}"
+          echo "The sha is ${{ github.sha }}"
+          echo "The actor is ${{ github.actor }}"
+          echo "The event name is ${{ github.event_name }}"
+          echo "The workflow is ${{ github.workflow }}"
+          echo "The head ref is ${{ github.head_ref }}"
+          echo "The base ref is ${{ github.base_ref }}"
+          echo "The job id is ${{ github.job }}"
+          echo "The run id is ${{ github.run_id }}"
+          echo "The run number is ${{ github.run_number }}"
+          echo "The server url is ${{ github.server_url }}"
+          echo "The api url is ${{ github.api_url }}"
+          echo "The graphql url is ${{ github.graphql_url }}"

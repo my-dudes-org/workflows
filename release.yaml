@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    if: contains(github.event.repository.topics, "release")
+    steps:
+      - name: Release it
+        run: |
+          echo "Release!"
